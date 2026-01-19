@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- NPK Soil Sensor USB device filter -->
+    <!-- Vendor ID: 1159 (0x0487), Product ID: 7 (0x0007) -->
+    <usb-device vendor-id="1159" product-id="7" />
+</resources>

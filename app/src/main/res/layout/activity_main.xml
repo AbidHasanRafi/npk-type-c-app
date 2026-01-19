@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <!-- Header -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="NPK Soil Sensor"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:layout_marginBottom="8dp" />
+
+    <!-- Connection Status -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="16dp">
+
+        <View
+            android:id="@+id/statusIndicator"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:background="@drawable/status_indicator_disconnected" />
+
+        <TextView
+            android:id="@+id/tvConnectionStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Disconnected"
+            android:textSize="16sp"
+            android:layout_marginStart="8dp" />
+
+    </LinearLayout>
+
+    <!-- Device Info -->
+    <TextView
+        android:id="@+id/tvDeviceInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Device: --"
+        android:textSize="14sp"
+        android:textColor="#666666"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Sensor Values Grid -->
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="2"
+        android:rowCount="4"
+        android:layout_marginBottom="16dp">
+
+        <!-- Temperature -->
+        <include layout="@layout/item_sensor_value"
+            android:id="@+id/cardTemperature" />
+
+        <!-- Humidity -->
+        <include layout="@layout/item_sensor_value"
+            android:id="@+id/cardHumidity" />
+
+        <!-- Conductivity -->
+        <include layout="@layout/item_sensor_value"
+            android:id="@+id/cardConductivity" />
+
+        <!-- pH -->
+        <include layout="@layout/item_sensor_value"
+            android:id="@+id/cardPH" />
+
+        <!-- Nitrogen -->
+        <include layout="@layout/item_sensor_value"
+            android:id="@+id/cardNitrogen" />
+
+        <!-- Phosphorus -->
+        <include layout="@layout/item_sensor_value"
+            android:id="@+id/cardPhosphorus" />
+
+        <!-- Potassium -->
+        <include layout="@layout/item_sensor_value"
+            android:id="@+id/cardPotassium" />
+
+    </GridLayout>
+
+    <!-- Spacer -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <!-- Buttons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/btnStartStop"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Start Reading"
+            android:layout_marginEnd="8dp" />
+
+        <Button
+            android:id="@+id/btnReadOnce"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Read Once" />
+
+    </LinearLayout>
+
+    <!-- Last Update Time -->
+    <TextView
+        android:id="@+id/tvLastUpdate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Last update: --"
+        android:textSize="12sp"
+        android:textColor="#999999"
+        android:textAlignment="center"
+        android:layout_marginTop="8dp" />
+
+</LinearLayout>

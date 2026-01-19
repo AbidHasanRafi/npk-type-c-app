@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">NPK Soil Sensor</string>
+    
+    <!-- Sensor Labels -->
+    <string name="label_temperature">Temperature</string>
+    <string name="label_humidity">Humidity</string>
+    <string name="label_conductivity">Conductivity</string>
+    <string name="label_ph">pH</string>
+    <string name="label_nitrogen">Nitrogen (N)</string>
+    <string name="label_phosphorus">Phosphorus (P)</string>
+    <string name="label_potassium">Potassium (K)</string>
+    
+    <!-- Units -->
+    <string name="unit_temperature">°C</string>
+    <string name="unit_humidity">%</string>
+    <string name="unit_conductivity">µS/cm</string>
+    <string name="unit_ph">pH</string>
+    <string name="unit_npk">mg/kg</string>
+    
+    <!-- Status -->
+    <string name="status_connected">Connected</string>
+    <string name="status_disconnected">Disconnected</string>
+    <string name="status_connecting">Connecting...</string>
+    
+    <!-- Buttons -->
+    <string name="btn_start">Start Reading</string>
+    <string name="btn_stop">Stop Reading</string>
+    <string name="btn_read_once">Read Once</string>
+    
+    <!-- Messages -->
+    <string name="msg_connect_sensor">Please connect the NPK sensor via USB OTG</string>
+    <string name="msg_permission_denied">USB permission denied</string>
+</resources>
